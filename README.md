@@ -1,2 +1,2 @@
 # MemoryOrg
-R package dedicated to quantifying retrieval organization
+R Package Dedicated to Quantifying Retrieval Organization
