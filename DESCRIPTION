@@ -1,0 +1,49 @@
+Package: MemoryOrg
+
+Type: 
+
+Package
+
+Title: 
+
+(A Few) Retrieval Organization Metrics for Human Memory Research
+
+Version: 
+
+0.1.0
+
+Author:
+
+Garrett D. Greeley 
+Ph.D. Student - Cognitive Science
+Stony Brook University, NY
+https://github.com/ggreeley
+
+Maintainer: 
+
+Garrett D. Greeley 
+<garrett.greeley@stonybrook.edu>
+<garrett.greeley@gmail.com>
+
+Maintenance / Requests: 
+
+https://github.com/ggreeley/MemoryOrg 
+
+Description: 
+
+Computes Adjusted Ratio of Clustering (ARC), a measure of category clustering, in several ways. Also computes Paired Frequency (PF) and the Shared Organization Metric Analysis (SOMA) for subjective organization and shared organization, respectively. 
+
+For ARC, see Roenker et al. (1971). For PF, see Sternberg & Tulving (1977). For SOMA, see Congleton & Rajaram (2014). Full references in specific function documentation.
+
+Depends: 
+	R (>= 3.5)
+Imports:
+	dplyr,
+	plyr,
+	stringr,
+	tidyr
+
+License: NA
+
+Encoding: UTF-8
+LazyData: true
