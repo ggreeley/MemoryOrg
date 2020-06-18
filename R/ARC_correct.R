@@ -1,4 +1,4 @@
-## Function #2: ARC_correct()
+## Function: ARC_correct()
 #### N = Correct Items Recalled (sum of recall correct 1's)
 #### Max = (N - c) when c is the number of categories recalled (will include intrusions: coded as their own category or *even* those left blank (i.e. "NA" will count as a category in Max and E(r))
 #### HOWEVER: Back-to-back blank cells (NAs) will not count toward repetitions
