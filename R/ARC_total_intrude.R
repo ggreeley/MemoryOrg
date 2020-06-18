@@ -1,9 +1,9 @@
-## Function #3: ARC_total_intrude()
+## Function: ARC_total_intrude()
 #### N = Total Items Recalled (lenghth of recall correct, 0's and 1's) - *Note*: this N used in E(r) as well, so denominator of E(r) will have N larger than sum of correct category contributions.
 #### Adjusted Max = N - c when c is the number of *correct* categories recalled (if intrusions are ALL treated the same (i.e., must be left blank - function adjusts Max to account for that)
 #### Back-to-back blank cells (NAs) will not be considered a repetition
 
-ARC_total_intrude <- function(correct, category) {
+ARC_total_intrude <- function(correct, category) { # correct = vector of 1s/0s indicating a response as correct, category = vector of category indicator
 
   `%>%` <- magrittr::`%>%`
 
