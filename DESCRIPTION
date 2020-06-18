@@ -31,7 +31,8 @@ https://github.com/ggreeley/MemoryOrg
 
 Description: 
 
-Computes Adjusted Ratio of Clustering (ARC), a measure of category clustering, in several ways. Also computes Paired Frequency (PF) and the Shared Organization Metric Analysis (SOMA) for subjective organization and shared organization, respectively. 
+Computes Adjusted Ratio of Clustering (ARC), a measure of category clustering, in several ways. 
+Also computes Paired Frequency (PF) and the Shared Organization Metric Analysis (SOMA) for subjective organization and shared organization, respectively. 
 
 For ARC, see Roenker et al. (1971). For PF, see Sternberg & Tulving (1977). For SOMA, see Congleton & Rajaram (2014). Full references in specific function documentation.
 
@@ -41,7 +42,8 @@ Imports:
 	dplyr,
 	plyr,
 	stringr,
-	tidyr
+	tidyr,
+	magrittr
 
 License: NA
 
