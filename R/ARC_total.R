@@ -1,9 +1,9 @@
-## Function #1: ARC_total()
+## Function: ARC_total()
 #### N = Total Items Recalled (length of recall correct vector, 0's and 1's)
 #### Max = (N - c) when c is the number of categories recalled (will include intrusions: coded as their own category or *even* left blank (i.e. "NA" will count as a category in Max and E(r))
 #### HOWEVER: Back-to-back blank cells (NAs) will not count toward repetitions
 
-ARC_total <- function(correct, category) {
+ARC_total <- function(correct, category) { # correct = vector of 1s/0s indicating a response as correct, category = vector of category indicator
 
   N = length(correct) # length of recall_correct vector (TOTAL RECALL)
 
