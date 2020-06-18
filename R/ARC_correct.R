@@ -3,7 +3,7 @@
 #### Max = (N - c) when c is the number of categories recalled (will include intrusions: coded as their own category or *even* those left blank (i.e. "NA" will count as a category in Max and E(r))
 #### HOWEVER: Back-to-back blank cells (NAs) will not count toward repetitions
 
-ARC_correct <- function(correct, category) { # correct = vector of 1s/0s indicating a response as correct, category = vector of category or items
+ARC_correct <- function(correct, category) { # correct = vector of 1s/0s indicating a response as correct, category = vector of category indicator
 
   N = sum(correct) # sum of recall_correct vector (CORRECT RECALL)
 
