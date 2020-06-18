@@ -48,7 +48,7 @@ Finally, functions containing "intrude" don't count blank NA values as a categor
 Moral of the story: in most real applications (intrusions present, interest in clustering of correct words) - ARC_correct_intrude is likely the best bet.
 
 ## PF 
-Each PF function takes two arguments: a vector of words (recall output) and... another vector of words (another recall output). PF assess the number of forward and backward pairs of items from recall trial X to recall trial X+1. Really, any two outputs can be compared, but that is the classic approach.
+Each PF function takes two arguments: a vector of words (recall output) and... another vector of words (another recall output). PF assess the number of forward and backward pairs of items from recall trial X to recall trial X+1. Really, any two outputs can be compared, but that is the classic approach. Just as with ARC, reading-in a CSV or similar file with the output of a participant (cleaned appropriately) is also possible - see example data.
 
 The only difference between the two PF functions is that PF_all produces the componet measures (number of common items, number of observed pairs, etc.) while PF produces only PF.
 
@@ -70,8 +70,11 @@ One important thing to note:
 Blank (NA) values (not shown in example above, but see example data) will *not* count toward a pair. Thus, if you want intrusions to count, simply leave them in the protocol. If you don't want intrusions to count, and want them to break pairs of words, remove the word and leave an empty cell.
 
 ## SOMA
-Both SOMA functions take two arguments: a vector of words (recall output), another vector of words (another recall output), and...another vector of words (another recall output). Computationally equivalent to PF, but with a kew difference in motivation, SOMA assesses the number of forward and backward pairs of items **across multiple individuals**. That is, it is a measure of shared organization.  
+Both SOMA functions take two arguments: a vector of words (recall output), another vector of words (another recall output), and...another vector of words (another recall output). Computationally equivalent to PF, but with a kew difference in motivation, SOMA assesses the number of forward and backward pairs of items **across multiple individuals**. That is, it is a measure of shared organization.  Specifically, these functions handle triads (i.e., responses of three individuals). SOMA_all produces dyad level SOMA and measurements, but if just two individuals are being compared, you should just use PF_all or PF. Just as with ARC and PF, reading-in a CSV or similar file with the output of a participant (cleaned appropriately) is also possible - see example data.
 
+The only difference between the two SOMA functions is that SOMA_all produces the componet measures (number of common items, number of observed pairs, etc.) while PF produces only PF.
+
+SOMA_all
 ```r
 resp_A <- c("king", "palace", "forest", "poem")
 resp_B <- c("walnut", "sorrow", "mountain", "game", "forest", "poem")
@@ -80,10 +83,11 @@ resp_C <- c("forest", "game", "bank", "mountain", "walnut", "sorrow")
 SOMA_all(resp_A, resp_B, resp_C)
 ```
 
+SOMA
 ```r
 SOMA(resp_A, resp_B, resp_C)
 ```
-Just as with PF, one important thing to note: 
+As with PF, one important thing to note: 
 
 Blank (NA) values (not shown in example above, but see example data) will *not* count toward a pair. Thus, if you want intrusions to count, simply leave them in the protocol. If you don't want intrusions to count, and want them to break pairs of words, remove the word and leave an empty cell.
 
