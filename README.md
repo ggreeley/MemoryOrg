@@ -5,32 +5,87 @@ A Minimal R Package Dedicated to Quantifying Retrieval Organization (A Few Ways)
 
 Computes Adjusted Ratio of Clustering (ARC), Paired Frequency (PF), and the Shared Organization Metric Analysis (SOMA)
 
-**ARC** (Roenker et al. 1971)...(More on the measure, what it dos, and why it is important)
+**ARC** (Roenker et al. 1971)...(More on the measure, what it does, and why it is important)
 
-**PF** (Sternberg & Tulving, 1977)...(More on the measure, what it dos, and why it is important)
+**PF** (Sternberg & Tulving, 1977)...(More on the measure, what it does, and why it is important)
 
-**SOMA** (Congleton & Rajaram, 2014)...(More on the measure, what it dos, and why it is important)
+**SOMA** (Congleton & Rajaram, 2014)...(More on the measure, what it does, and why it is important)
 
 ## ARC
-Examples to come...
+Each ARC function takes two arguments: a vector of 1's and 0's that indicate if a response (recalled word) was correct, and a vector containing the category of the word recalled. This category code can be a single letter (like below), numeric (e.g., fruit = 1), or simply the category name (e.g., FRUIT) - as long as it's consistent. This data can be manually entered (like the example) or, more likely, read-in as a recall protocol. That is, a CSV or similar file with the output of a participant (cleaned appropriately). See the ARC example data and specific function documentation for formatting, which is especially important if intrusions are present.
 
+ARC_correct:
 ```r
-# examples
+recall_correct <- c(1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+recall_category <- c("a","a", NA ,"a","a","b","a","c","b","b","b","b","c","b","c","c","c","c")
+
+ARC_correct(recall_correct, recall_category)
 ```
+
+ARC_total:
+```r
+ARC_total(recall_correct, recall_category)
+```
+
+ARC_correct_intrude:
+```r
+ARC_correct_intrude(recall_correct, recall_category)
+```
+
+ARC_total_intrude:
+```r
+ARC_total_intrude(recall_correct, recall_category)
+```
+
+A few important things to note: 
+
+Back-to-back NA's do not count toward repetitions (even if NA's are being counted as a category as they are in ARC_total and ARC_correct). Thus, if you want to measure clustering of intrusions, code them rather than leaving them blank. 
+
+Additionally, "correct" and "total" in the functions refer to the vector indicating correct/incorrect responses. This will impact the N in Max and E(r) calculations (see documentation and note the different results with the same data). 
+
+Finally, functions containing "intrude" don't count blank NA values as a category, though ARC_total_intrude will still count them toward N.
+
+Moral of the story: in most real applications (intrusions present, interest in clustering of correct words) - ARC_correct_intrude is likely the best bet.
 
 ## PF 
-Examples to come...
+Each PF function takes two arguments: a vector of words (recall output) and... another vector of words (another recall output). PF assess the number of forward and backward pairs of items from recall trial X to recall trial X+1. Really, any two outputs can be compared, but that is the classic approach.
 
+The only difference between the two PF functions is that PF_all produces the componet measures (number of common items, number of observed pairs, etc.) while PF produces only PF.
+
+PF_all
 ```r
-# examples
+recall_1 <- c("king", "palace", "forest", "poem")
+recall_2 <- c("walnut", "sorrow", "mountain", "game", "forest", "poem")
+
+PF_all(recall_1, recall_2)
 ```
+
+PF
+```r
+PF(recall_1, recall_2)
+```
+
+One important thing to note: 
+
+Blank (NA) values (not shown in example above, but see example data) will *not* count toward a pair. Thus, if you want intrusions to count, simply leave them in the protocol. If you don't want intrusions to count, and want them to break pairs of words, remove the word and leave an empty cell.
 
 ## SOMA
-Examples to come...
+Both SOMA functions take two arguments: a vector of words (recall output), another vector of words (another recall output), and...another vector of words (another recall output). Computationally equivalent to PF, but with a kew difference in motivation, SOMA assesses the number of forward and backward pairs of items **across multiple individuals**. That is, it is a measure of shared organization.  
 
 ```r
-# examples
+resp_A <- c("king", "palace", "forest", "poem")
+resp_B <- c("walnut", "sorrow", "mountain", "game", "forest", "poem")
+resp_C <- c("forest", "game", "bank", "mountain", "walnut", "sorrow")
+
+SOMA_all(resp_A, resp_B, resp_C)
 ```
+
+```r
+SOMA(resp_A, resp_B, resp_C)
+```
+Just as with PF, one important thing to note: 
+
+Blank (NA) values (not shown in example above, but see example data) will *not* count toward a pair. Thus, if you want intrusions to count, simply leave them in the protocol. If you don't want intrusions to count, and want them to break pairs of words, remove the word and leave an empty cell.
 
 ## References
 ARC: Roenker, D. L., Thompson, C. P., & Brown, S. C. (1971). Comparison of measures for the estimation of clustering in free recall. Psychological Bulletin, 76(1), 45–48. https://doi.org/10.1037/h0031355 
