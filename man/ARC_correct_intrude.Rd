@@ -31,7 +31,6 @@ ARC_correct_intrude(correct, category)
   \item{category}{Numeric or character vector representing category membership of associated item in x column.}
 %%     ~~Describe \code{x} here~~
 }
-}
 \details{
 ARC = [r − E(r)] / [max − E(r)]
 
