@@ -4,9 +4,9 @@ Type: Package
 
 Title: (A Few) Retrieval Organization Metrics for Human Memory Research
 
-Version: 0.1.0
+Version: 1.0.0
 
-Author:Garrett D. Greeley - Ph.D. Student - Cognitive Science - Stony Brook University, NY - https://github.com/ggreeley
+Author: Garrett D. Greeley - Ph.D. Student - Cognitive Science - Stony Brook University, NY - https://github.com/ggreeley
 
 Maintainer: Garrett D. Greeley <garrett.greeley@stonybrook.edu> <garrett.greeley@gmail.com>
 
