@@ -12,7 +12,7 @@ Maintainer: Garrett D. Greeley <garrett.greeley@stonybrook.edu> <garrett.greeley
 
 Description: A minimal R package to make quantifying three measures of retrieval organization simple and standardized. Computes Adjusted Ratio of Clustering (ARC), a measure of category clustering, in several ways. Also computes Paired Frequency (PF) and the Shared Organization Metric Analysis (SOMA) for subjective organization and shared organization, respectively. For ARC, see Roenker et al. (1971). For PF, see Sternberg & Tulving (1977). For SOMA, see Congleton & Rajaram (2014). Full references in specific function documentation.
 
-Depends: R (>= 3.5)
+Depends: 
 Imports:dplyr,plyr,stringr,tidyr,magrittr
 
 License: NA
