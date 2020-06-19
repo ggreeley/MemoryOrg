@@ -17,7 +17,6 @@ SOMA(resp_A, resp_B, resp_C)
   \item{resp_C}{Character vector containing items (word responses) produced by Person C}
 %%     ~~Describe \code{x} here~~
 }
-}
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
