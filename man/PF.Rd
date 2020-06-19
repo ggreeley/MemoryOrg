@@ -16,7 +16,6 @@ PF(resp_1, resp_2)
   \item{resp_2}{Character vector containing items (word responses) produced at trial 2}}
 %%     ~~Describe \code{x} here~~
 }
-}
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
