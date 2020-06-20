@@ -11,7 +11,7 @@ This package contains functions that compute **Adjusted Ratio of Clustering** (A
 
 **SOMA**: Congleton & Rajaram (2014) adapted Sternberg and Tulving's (1977) measure of PF to quantify the retrieval organization *shared* by multiple individuals. SOMA accomplishes this by applying the same computation to the recall outputs of two *different* individuals. For groups larger than two, SOMA is simply the average of all possible two-person SOMA comparisons. Just like PF, higher SOMA indicates greater shared organization among the group in question.
 
-While each of these measures approach retrieval organization differently, the utility of each comes from their ability to shed light on the structure of memory in free-recall.
+While each of these measures approach retrieval organization differently, the utility of each comes from their ability to shed light on the structure of memory in free-recall. Finally, this is obviously just a brief introduction to these measures. For a deeper look, check out the references below!
 
 # Getting Started
 
