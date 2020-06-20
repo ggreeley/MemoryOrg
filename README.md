@@ -24,7 +24,7 @@ library(MemoryOrg)
 # ARC
 Each ARC function takes two arguments: a vector of 1's and 0's that indicate if a response (recalled word) was correct, and a vector containing the category of the word recalled. This category code can be a single letter (like below), numeric (e.g., fruit = 1), or simply the category name (e.g., FRUIT) - as long as it's consistent. This data can be manually entered (like the example) or, more likely, read-in as a recall protocol. That is, a CSV or similar file with the output of a participant (cleaned appropriately). See the ARC example data and specific function documentation for formatting, which is especially important if intrusions are present.
 
-**ARC_correct** - 
+**ARC_correct**  
 ```r
 recall_correct <- c(1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) # correct/incorrect
 recall_category <- c("a","a", NA ,"a","a","b","a","c","b","b","b","b","c","b","c","c","c","c") # corresponding categories
@@ -32,17 +32,17 @@ recall_category <- c("a","a", NA ,"a","a","b","a","c","b","b","b","b","c","b","c
 ARC_correct(recall_correct, recall_category)
 ```
 
-**ARC_total** - 
+**ARC_total**  
 ```r
 ARC_total(recall_correct, recall_category)
 ```
 
-**ARC_correct_intrude** - 
+**ARC_correct_intrude**  
 ```r
 ARC_correct_intrude(recall_correct, recall_category)
 ```
 
-**ARC_total_intrude** - 
+**ARC_total_intrude**  
 ```r
 ARC_total_intrude(recall_correct, recall_category)
 ```
@@ -62,7 +62,7 @@ Each PF function takes two arguments: a vector of words (recall output) and... a
 
 The only difference between the two PF functions is that PF_all produces the componet measures (number of common items, number of observed pairs, etc.) while PF produces only PF.
 
-**PF_all** - 
+**PF_all**  
 ```r
 recall_1 <- c("king", "palace", "forest", "poem") # recall output (e.x., recall 1)
 recall_2 <- c("walnut", "sorrow", "mountain", "game", "forest", "poem") # another recall output (e.x., recall 2)
@@ -82,9 +82,9 @@ Blank (NA) values (not shown in example above, but see example data) will *not* 
 # SOMA
 Both SOMA functions take three arguments: a vector of words (recall output), another vector of words (another recall output), and...another vector of words (another recall output). Computationally equivalent to PF, but with a key difference in motivation, SOMA assesses the number of forward and backward pairs of items **across multiple individuals**. That is, it is a measure of shared organization.  Specifically, these functions handle triads (i.e., responses of three individuals). SOMA_all produces dyad level SOMA and measurements, but if just two individuals are being compared, you should just use PF_all or PF. Just as with ARC and PF, reading-in a CSV or similar file with the output of a participant (cleaned appropriately) is also possible - see example data.
 
-The only difference between the two SOMA functions is that SOMA_all produces the componet measures (number of common items, number of observed pairs, etc.) while PF produces only PF.
+The only difference between the two SOMA functions is that SOMA_all produces the componet measures (number of common items, number of observed pairs, etc.) while SOMA produces only the triad SOMA.
 
-**SOMA_all** -
+**SOMA_all** 
 ```r
 resp_A <- c("king", "palace", "forest", "poem") # persona A's recall output
 resp_B <- c("walnut", "sorrow", "mountain", "game", "forest", "poem") # person B's recall output
@@ -93,7 +93,7 @@ resp_C <- c("forest", "game", "bank", "mountain", "walnut", "sorrow") # person C
 SOMA_all(resp_A, resp_B, resp_C)
 ```
 
-**SOMA** - 
+**SOMA**  
 ```r
 SOMA(resp_A, resp_B, resp_C)
 ```
