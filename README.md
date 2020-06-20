@@ -11,13 +11,23 @@ Computes Adjusted Ratio of Clustering (ARC), Paired Frequency (PF), and the Shar
 
 **SOMA** (Congleton & Rajaram, 2014)...(More on the measure, what it does, and why it is important)
 
-## ARC
+## Getting Started
+
+As MemoryOrg is hosted on Github, you can use devtools to install. If you don't have it already, you'll need to install.
+```r
+install.packages("devtools")
+library(devtools)
+install_github("ggreeley/MemoryOrg")
+library(MemoryOrg)
+```
+
+# ARC
 Each ARC function takes two arguments: a vector of 1's and 0's that indicate if a response (recalled word) was correct, and a vector containing the category of the word recalled. This category code can be a single letter (like below), numeric (e.g., fruit = 1), or simply the category name (e.g., FRUIT) - as long as it's consistent. This data can be manually entered (like the example) or, more likely, read-in as a recall protocol. That is, a CSV or similar file with the output of a participant (cleaned appropriately). See the ARC example data and specific function documentation for formatting, which is especially important if intrusions are present.
 
 **ARC_correct** - 
 ```r
 recall_correct <- c(1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) # correct/incorrect
-recall_category <- c("a","a", NA ,"a","a","b","a","c","b","b","b","b","c","b","c","c","c","c") #corresponding categories
+recall_category <- c("a","a", NA ,"a","a","b","a","c","b","b","b","b","c","b","c","c","c","c") # corresponding categories
 
 ARC_correct(recall_correct, recall_category)
 ```
@@ -47,7 +57,7 @@ Finally, functions containing "intrude" don't count blank NA values as a categor
 
 Moral of the story: in most real applications (intrusions present, interest in clustering of correct words) - ARC_correct_intrude is likely the best bet.
 
-## PF 
+# PF 
 Each PF function takes two arguments: a vector of words (recall output) and... another vector of words (another recall output). PF assess the number of forward and backward pairs of items from recall trial X to recall trial X+1. Really, any two outputs can be compared, but that is the classic approach. Just as with ARC, reading-in a CSV or similar file with the output of a participant (cleaned appropriately) is also possible - see example data.
 
 The only difference between the two PF functions is that PF_all produces the componet measures (number of common items, number of observed pairs, etc.) while PF produces only PF.
@@ -69,7 +79,7 @@ One important thing to note:
 
 Blank (NA) values (not shown in example above, but see example data) will *not* count toward a pair. Thus, if you want intrusions to count, simply leave them in the protocol. If you don't want intrusions to count, and want them to break pairs of words, remove the word and leave an empty cell.
 
-## SOMA
+# SOMA
 Both SOMA functions take three arguments: a vector of words (recall output), another vector of words (another recall output), and...another vector of words (another recall output). Computationally equivalent to PF, but with a key difference in motivation, SOMA assesses the number of forward and backward pairs of items **across multiple individuals**. That is, it is a measure of shared organization.  Specifically, these functions handle triads (i.e., responses of three individuals). SOMA_all produces dyad level SOMA and measurements, but if just two individuals are being compared, you should just use PF_all or PF. Just as with ARC and PF, reading-in a CSV or similar file with the output of a participant (cleaned appropriately) is also possible - see example data.
 
 The only difference between the two SOMA functions is that SOMA_all produces the componet measures (number of common items, number of observed pairs, etc.) while PF produces only PF.
