@@ -1,8 +1,0 @@
-﻿A_correct,A_response,B_correct,B_response,C_correct,C_response
-1,walnut,1,forest,1,demon
-1,sorrow,1,game,1,bank
-0,,1,bank,1,mountain
-1,game,1,mountain,1,poem
-1,forest,1,walnut,1,forest
-1,poem,1,sorrow,1,game
-,,,,0,
