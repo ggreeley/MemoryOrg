@@ -30,21 +30,30 @@ recall_correct <- c(1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) # correct/incorrect
 recall_category <- c("a","a", NA ,"a","a","b","a","c","b","b","b","b","c","b","c","c","c","c") # corresponding categories
 
 ARC_correct(recall_correct, recall_category)
+
+# with example data (Roenker et al., 1971)
+ARC_correct(ARC_3LE$recall_correct, ARC_3LE$recall_category_name)
 ```
 
 **ARC_total**  
 ```r
 ARC_total(recall_correct, recall_category)
+
+# with example data (Roenker et al., 1971)
 ```
 
 **ARC_correct_intrude**  
 ```r
 ARC_correct_intrude(recall_correct, recall_category)
+
+# with example data (Roenker et al., 1971)
 ```
 
 **ARC_total_intrude**  
 ```r
 ARC_total_intrude(recall_correct, recall_category)
+
+# with example data (Roenker et al., 1971)
 ```
 
 A few important things to note: 
@@ -60,7 +69,7 @@ Moral of the story: in most real applications (intrusions present, interest in c
 # PF 
 Each PF function takes two arguments: a vector of words (recall output) and... another vector of words (another recall output). PF assess the number of forward and backward pairs of items from recall trial X to recall trial X+1. Really, any two outputs can be compared, but that is the classic approach. Just as with ARC, reading-in a CSV or similar file with the output of a participant (cleaned appropriately) is also possible - see example data.
 
-The only difference between the two PF functions is that PF_all produces the componet measures (number of common items, number of observed pairs, etc.) while PF produces only PF.
+The only difference between the two PF functions is that PF_all produces PF *and* the componet measures (number of common items, number of observed pairs, etc.) while PF produces only PF.
 
 **PF_all**  
 ```r
@@ -68,11 +77,17 @@ recall_1 <- c("king", "palace", "forest", "poem") # recall output (e.x., recall 
 recall_2 <- c("walnut", "sorrow", "mountain", "game", "forest", "poem") # another recall output (e.x., recall 2)
 
 PF_all(recall_1, recall_2)
+
+# with example data (Sternberg & Tulving, 1977)
+PF_all(PF_test$R_1_word, PF_test$R_2_word)
 ```
 
 **PF**
 ```r
 PF(recall_1, recall_2)
+
+# with example data (Sternberg & Tulving, 1977)
+PF(PF_test$R_1_word, PF_test$R_2_word)
 ```
 
 One important thing to note: 
@@ -82,7 +97,7 @@ Blank (NA) values (not shown in example above, but see example data) will *not* 
 # SOMA
 Both SOMA functions take three arguments: a vector of words (recall output), another vector of words (another recall output), and...another vector of words (another recall output). Computationally equivalent to PF, but with a key difference in motivation, SOMA assesses the number of forward and backward pairs of items **across multiple individuals**. That is, it is a measure of shared organization.  Specifically, these functions handle triads (i.e., responses of three individuals). SOMA_all produces dyad level SOMA and measurements, but if just two individuals are being compared, you should just use PF_all or PF. Just as with ARC and PF, reading-in a CSV or similar file with the output of a participant (cleaned appropriately) is also possible - see example data.
 
-The only difference between the two SOMA functions is that SOMA_all produces the componet measures (number of common items, number of observed pairs, etc.) while SOMA produces only the triad SOMA.
+The only difference between the two SOMA functions is that SOMA_all produces the triad SOMA *and* the componet measures (number of common items, number of observed pairs, etc.) while SOMA produces only the triad SOMA.
 
 **SOMA_all** 
 ```r
@@ -91,11 +106,17 @@ resp_B <- c("walnut", "sorrow", "mountain", "game", "forest", "poem") # person B
 resp_C <- c("forest", "game", "bank", "mountain", "walnut", "sorrow") # person C's recall output
 
 SOMA_all(resp_A, resp_B, resp_C)
+
+# with example data (adapted from Sternberg & Tulving, 1977)
+SOMA_all(SOMA_test$A_response, SOMA_test$B_response, SOMA_test$C_response)
 ```
 
 **SOMA**  
 ```r
 SOMA(resp_A, resp_B, resp_C)
+
+# with example data (adapted from Sternberg & Tulving, 1977)
+SOMA(SOMA_test$A_response, SOMA_test$B_response, SOMA_test$C_response)
 ```
 As with PF, one important thing to note: 
 
