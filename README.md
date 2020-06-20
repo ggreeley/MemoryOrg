@@ -40,6 +40,8 @@ ARC_correct(ARC_3LE$recall_correct, ARC_3LE$recall_category_name)
 ARC_total(recall_correct, recall_category)
 
 # with example data (Roenker et al., 1971)
+ARC_total(ARC_3SE_intrusion$recall_correct,
+          ARC_3SE_intrusion$recall_category_name)
 ```
 
 **ARC_correct_intrude**  
@@ -47,6 +49,8 @@ ARC_total(recall_correct, recall_category)
 ARC_correct_intrude(recall_correct, recall_category)
 
 # with example data (Roenker et al., 1971)
+ARC_correct_intrude(ARC_3SE_intrusion$recall_correct,
+                    ARC_3SE_intrusion$recall_category_name)
 ```
 
 **ARC_total_intrude**  
@@ -54,6 +58,8 @@ ARC_correct_intrude(recall_correct, recall_category)
 ARC_total_intrude(recall_correct, recall_category)
 
 # with example data (Roenker et al., 1971)
+ARC_total_intrude(ARC_3SE_intrusion$recall_correct,
+                  ARC_3SE_intrusion$recall_category_name)
 ```
 
 A few important things to note: 
