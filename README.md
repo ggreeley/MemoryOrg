@@ -66,6 +66,8 @@ ARC_total_intrude(ARC_3SE_intrusion$recall_correct,
 
 A few important things to note: 
 
+All ARC functions produce a list that can be stored as an object. Specific measures (ARC, correct/total, and other metrics) can then be referenced individually.
+
 Back-to-back NA's *do not* count toward repetitions (even if NA's are being counted as a category as they are in ARC_total and ARC_correct). Thus, if you want to measure clustering of intrusions, code them rather than leaving them blank. 
 
 Additionally, "correct" and "total" in the functions refer to the vector indicating correct/incorrect responses. This will impact the N in Max and E(r) calculations (see documentation and note the different results with the same data). 
@@ -98,7 +100,9 @@ PF(recall_1, recall_2)
 PF(PF_test$R_1_word, PF_test$R_2_word)
 ```
 
-One important thing to note: 
+Two important things to note: 
+
+Like ARC, both PF functions produce a list that can be stored as an object and referenced later.
 
 Blank (NA) values (not shown in example above, but see example data) will *not* count toward a pair. Thus, if you want intrusions to count, simply leave them in the protocol. If you don't want intrusions to count, and want them to break pairs of words, remove the word and leave an empty cell.
 
@@ -126,9 +130,11 @@ SOMA(resp_A, resp_B, resp_C)
 # with example data (adapted from Sternberg & Tulving, 1977)
 SOMA(SOMA_test$A_response, SOMA_test$B_response, SOMA_test$C_response)
 ```
-As with PF, one important thing to note: 
+As with PF, two important things to note: 
 
-Blank (NA) values (not shown in example above, but see example data) will *not* count toward a pair. Thus, if you want intrusions to count, simply leave them in the protocol. If you don't want intrusions to count, and want them to break pairs of words, remove the word and leave an empty cell.
+Like ARC and PF, SOMA functions produce a list that can be stored as a object and reference later.
+
+Finally, blank (NA) values (not shown in example above, but see example data) will *not* count toward a pair. Thus, if you want intrusions to count, simply leave them in the protocol. If you don't want intrusions to count, and want them to break pairs of words, remove the word and leave an empty cell.
 
 ## References
 **ARC**: Roenker, D. L., Thompson, C. P., & Brown, S. C. (1971). Comparison of measures for the estimation of clustering in free recall. Psychological Bulletin, 76(1), 45–48. https://doi.org/10.1037/h0031355 
