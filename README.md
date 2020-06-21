@@ -3,7 +3,7 @@ A Minimal R Package Dedicated to Quantifying Retrieval Organization
 
 ## What the Package Does and Why
 
-This package contains functions that compute **Adjusted Ratio of Clustering** (ARC), **Paired Frequency** (PF), and the **Shared Organization Metric Analysis** (SOMA). In human memory research, these are all measures of retireval organization in free-recall contexts. That is, beyond quantity ("75% of items were recalled"), these organizational metrics assess the *structure* of memory - or *how* items are recalled. 
+This package contains functions that compute **Adjusted Ratio of Clustering** (ARC), **Paired Frequency** (PF), and the **Shared Organization Metric Analysis** (SOMA). In human memory research, these are all measures of retireval organization in free-recall contexts. That is, beyond quantity ("75% of items recalled"), these organizational metrics assess the *structure* of memory - or *how* items are recalled. 
 
 **ARC**: Roenker et al. (1971) developed ARC as a measure of *category clustering*. That is, ARC assess the tendency for individuals to group or cluster studied items by category at recall. For example, a participant could study a 60-item list consisting of 6 categories, with 10 exemplars per category. At recall, ARC evaluates the repetitions of categories present in the output (how frequently an item of a category follows an item of the same category). As a ratio, ARC scores approaching 1 are highly organized (clustered by category) while scores closer to 0 indicate chance clustering.
 
