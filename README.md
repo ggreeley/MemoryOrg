@@ -3,11 +3,6 @@ A Minimal R Package Dedicated to Quantifying Retrieval Organization
 
 <img src="https://user-images.githubusercontent.com/65792156/88110077-8f11a100-cb79-11ea-8508-8557a938a961.png" height="150"/>
 
-#### Acknowledgements
-Faculty Supervisor: Suparna Rajaram, Ph.D.
-
-Many thanks to Annesta Batuwangla and Melissa Chen for helping to *manually* validate results. 
-
 ## What the Package Does and Why
 
 This package contains functions that compute **Adjusted Ratio of Clustering** (ARC), **Paired Frequency** (PF), and the **Shared Organization Metric Analysis** (SOMA). In human memory research, these are all measures of retireval organization in free-recall contexts. That is, beyond quantity ("75% of items recalled"), these organizational metrics assess the *structure* of memory - or *how* items are recalled. 
@@ -142,6 +137,11 @@ As with PF, two important things to note:
 Like ARC and PF, SOMA functions produce a list that can be stored as a object and reference later.
 
 Finally, blank (NA) values (not shown in example above, but see example data) will *not* count toward a pair. Thus, if you want intrusions to count, simply leave them in the protocol. If you don't want intrusions to count, and want them to break pairs of words, remove the word and leave an empty cell.
+
+## Acknowledgements
+Faculty Supervisor: Suparna Rajaram, Ph.D.
+
+Many thanks to Annesta Batuwangla and Melissa Chen for helping to *manually* validate results. 
 
 ## References
 **ARC**: Roenker, D. L., Thompson, C. P., & Brown, S. C. (1971). Comparison of measures for the estimation of clustering in free recall. Psychological Bulletin, 76(1), 45–48. https://doi.org/10.1037/h0031355 
