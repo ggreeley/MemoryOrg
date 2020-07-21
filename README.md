@@ -1,5 +1,11 @@
+![alt text]https://user-images.githubusercontent.com/65792156/88110077-8f11a100-cb79-11ea-8508-8557a938a961.png
+
 # MemoryOrg
 A Minimal R Package Dedicated to Quantifying Retrieval Organization
+
+#### Acknowledgements
+Faculty Supervisor: Suparna Rajaram, Ph.D.
+Many thanks to Annesta Batuwangla and Melissa Chen for helping to *manually* validate results.
 
 ## What the Package Does and Why
 
@@ -113,7 +119,7 @@ The only difference between the two SOMA functions is that SOMA_all produces the
 
 **SOMA_all** 
 ```r
-resp_A <- c("king", "palace", "forest", "poem") # persona A's recall output
+resp_A <- c("king", "palace", "forest", "poem") # person A's recall output
 resp_B <- c("walnut", "sorrow", "mountain", "game", "forest", "poem") # person B's recall output
 resp_C <- c("forest", "game", "bank", "mountain", "walnut", "sorrow") # person C's recall output
 
@@ -142,3 +148,5 @@ Finally, blank (NA) values (not shown in example above, but see example data) wi
 **PF**: Sternberg, R. J., & Tulving, E. (1977). The measurement of subjective organization in free recall. Psychological Bulletin, 84, 539-556.
 
 **SOMA**: Congleton. A. R., & Rajaram, S. (2014). Collaboration changes both the content and the structure of memory: Building the architecture of shared representations. Journal of Experimental Psychology: General, 143(4), 1570-1584. https://doi.org/10.1037/a0035974
+
+Hex logo created with the hexSticker package: https://github.com/GuangchuangYu/hexSticker
