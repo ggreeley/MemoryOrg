@@ -1,4 +1,4 @@
-![](https://user-images.githubusercontent.com/65792156/88110077-8f11a100-cb79-11ea-8508-8557a938a961.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/65792156/88110077-8f11a100-cb79-11ea-8508-8557a938a961.png" height="300"/>
 
 # MemoryOrg
 A Minimal R Package Dedicated to Quantifying Retrieval Organization
