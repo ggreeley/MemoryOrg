@@ -1,13 +1,12 @@
-<img src="https://user-images.githubusercontent.com/65792156/88110077-8f11a100-cb79-11ea-8508-8557a938a961.png" height="200"/>
-
 # MemoryOrg
 A Minimal R Package Dedicated to Quantifying Retrieval Organization
 
 #### Acknowledgements
 Faculty Supervisor: Suparna Rajaram, Ph.D.
 
-Many thanks to Annesta Batuwangla and Melissa Chen for helping to *manually* validate results.
+Many thanks to Annesta Batuwangla and Melissa Chen for helping to *manually* validate results. 
 
+<img src="https://user-images.githubusercontent.com/65792156/88110077-8f11a100-cb79-11ea-8508-8557a938a961.png" height="200"/>
 ## What the Package Does and Why
 
 This package contains functions that compute **Adjusted Ratio of Clustering** (ARC), **Paired Frequency** (PF), and the **Shared Organization Metric Analysis** (SOMA). In human memory research, these are all measures of retireval organization in free-recall contexts. That is, beyond quantity ("75% of items recalled"), these organizational metrics assess the *structure* of memory - or *how* items are recalled. 
