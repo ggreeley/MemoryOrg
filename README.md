@@ -6,12 +6,13 @@ Faculty Supervisor: Suparna Rajaram, Ph.D.
 
 Many thanks to Annesta Batuwangla and Melissa Chen for helping to *manually* validate results. 
 
-<img src="https://user-images.githubusercontent.com/65792156/88110077-8f11a100-cb79-11ea-8508-8557a938a961.png" height="200"/>
+<img src="https://user-images.githubusercontent.com/65792156/88110077-8f11a100-cb79-11ea-8508-8557a938a961.png" height="100"/>
+
 ## What the Package Does and Why
 
 This package contains functions that compute **Adjusted Ratio of Clustering** (ARC), **Paired Frequency** (PF), and the **Shared Organization Metric Analysis** (SOMA). In human memory research, these are all measures of retireval organization in free-recall contexts. That is, beyond quantity ("75% of items recalled"), these organizational metrics assess the *structure* of memory - or *how* items are recalled. 
 
-**ARC**: Roenker et al. (1971) developed ARC as a measure of *category clustering*. That is, ARC assess the tendency for individuals to group or cluster studied items by category at recall. For example, a participant could study a 60-item list consisting of 6 categories, with 10 exemplars per category. At recall, ARC evaluates the repetitions of categories present in the output (how frequently an item of a category follows an item of the same category). As a ratio, ARC scores approaching 1 are highly organized (clustered by category) while scores closer to 0 indicate chance clustering.
+**ARC**: Roenker et al. (1971) developed ARC as a measure of *category clustering*. That is, ARC assesses the tendency for individuals to group or cluster studied items by category at recall. For example, a participant could study a 60-item list consisting of 6 categories, with 10 exemplars per category. At recall, ARC evaluates the repetitions of categories present in the output (how frequently an item of a category follows an item of the same category). As a ratio, ARC scores approaching 1 are highly organized (clustered by category) while scores closer to 0 indicate chance clustering.
 
 **PF**: Sternberg & Tulving (1977) developed PF as a measure of *subjective* organization. Unlike ARC (which requires study lists to have some inherent structure, such as categories), PF assesses the number of forward and backward pairs of items across recall trials. For example, a participant could study a list of unrelated nouns and perform two or more free-recall tests. PF would assess the pairs present in each recall, as well as the expected number of pairs. Higher PF indicates more consistent organization between the recalls in question (recall 1 - 2, recall 2 - 3, etc.).
 
