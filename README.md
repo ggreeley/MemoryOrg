@@ -1,12 +1,12 @@
 # MemoryOrg
 A Minimal R Package Dedicated to Quantifying Retrieval Organization
 
+<img src="https://user-images.githubusercontent.com/65792156/88110077-8f11a100-cb79-11ea-8508-8557a938a961.png" height="150"/>
+
 #### Acknowledgements
 Faculty Supervisor: Suparna Rajaram, Ph.D.
 
 Many thanks to Annesta Batuwangla and Melissa Chen for helping to *manually* validate results. 
-
-<img src="https://user-images.githubusercontent.com/65792156/88110077-8f11a100-cb79-11ea-8508-8557a938a961.png" height="100"/>
 
 ## What the Package Does and Why
 
