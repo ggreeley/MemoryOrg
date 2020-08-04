@@ -139,10 +139,11 @@ Like ARC and PF, SOMA functions produce a list that can be stored as a object an
 Finally, blank (NA) values (not shown in example above, but see example data) will *not* count toward a pair. Thus, if you want intrusions to count, simply leave them in the protocol. If you don't want intrusions to count, and want them to break pairs of words, remove the word and leave an empty cell.
 
 ## Acknowledgements
-Faculty Supervisor: Suparna Rajaram, Ph.D.
+Faculty Supervisor: Suparna Rajaram, Ph.D. - Distinguished Professor
 
-Many thanks to Annesta Batuwangla and Melissa Chen for helping to *manually* validate results. 
+Many thanks to Annesta Batuwangla and Melissa Chen for helping to manually validate results. 
 
+Parts of the work reported in this submission were supported by National Science Foundation grant 1456928.
 ## References
 **ARC**: Roenker, D. L., Thompson, C. P., & Brown, S. C. (1971). Comparison of measures for the estimation of clustering in free recall. Psychological Bulletin, 76(1), 45–48. https://doi.org/10.1037/h0031355 
 
